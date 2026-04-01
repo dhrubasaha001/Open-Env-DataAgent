@@ -1,0 +1,22 @@
+id: data-analysis-env
+name: Data Analysis Environment
+
+observation_space:
+  type: dict
+  fields:
+    columns: list
+    rows: int
+
+action_space:
+  type: dict
+  fields:
+    task: string
+    column: string
+    value: float
+
+reward_range: [0.0, 1.0]
+
+tasks:
+  - mean
+  - median
+  - summary
